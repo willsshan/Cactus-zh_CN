@@ -31,19 +31,19 @@ const { page, uniqueTags } = Astro.props;
 const meta = {
 	description: "点点滴滴，江河湖海",
 	// 修改：博客
-	title: "博客",
+	title: "Blog",
 };
 
 const paginationProps = {
 	...(page.url.prev && {
 		prevUrl: {
-			text: "上一页",
+			text: "Previous",
 			url: page.url.prev,
 		},
 	}),
 	...(page.url.next && {
 		nextUrl: {
-			text: "下一页",
+			text: "Nect",
 			url: page.url.next,
 			className: "font-bold text-blue-500 text-lg",
 		},
@@ -56,7 +56,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 
 <PageLayout meta={meta}>
 	<h1 class="title mb-6 flex items-center gap-3">
-		博客
+		Blog
 		<a class="text-accent" href="/rss.xml" target="_blank">
 			<span class="sr-only">RSS feed</span>
 			<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name="mdi:rss" />
@@ -86,7 +86,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 				<aside>
 					<h2 class="title mb-4 flex items-center gap-2 text-lg">
 						{/* 修改：标签侧边栏 */}
-						标签
+						Tag
 						<svg
 							aria-hidden="true"
 							class="h-6 w-6"
