@@ -31,7 +31,7 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
     image: {
-        domains: ["lino.chat"],
+        domains: ["image.lino.chat"],
     },
     integrations: [expressiveCode(expressiveCodeOptions), icon({
   iconDir: "public/icons", // 修改：指定自定义图标目录 name = svg文件名
