@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-// import SocialList from "@/components/SocialList.astro";
+import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import Note from "@/components/note/Note.astro";
 import { getAllPosts } from "@/data/post";
@@ -22,7 +22,15 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 ---
 
 <!-- 修改：主页 -->
-<PageLayout meta={{ title: "主页" }}>
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<h1 class="title mb-6">Hi, I'm Jayton!</h1>
+		<p class="mb-4 text-base">
+			Software Engineer | Focused on building large-scale, high-concurrency distributed systems.
+			Proficient in Java, SQL, and Rust. Currently exploring AI/ML to exp.
+		</p>
+		<SocialList />
+	</section>
 	<!-- 修改：注释 -->
 	<!-- <section>
 		<h1 class="title mb-6">Hello World!</h1>
@@ -34,7 +42,7 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 		<SocialList />
 	</section> -->
 	<section aria-label="Blog post list">
-		<h2 class="title mb-6 text-xl text-accent"><a href="/">最近文章</a></h2>
+		<h2 class="title mb-6 text-xl text-accent"><a href="/">Latest Posts</a></h2>
 		<ul class="space-y-4" role="list">
 			{
 				allPostsByDate.map((p) => (
@@ -46,14 +54,14 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 		</ul>
 		<h2 class="mt-7 grid gap-2 text-lg sm:grid-cols-[auto_1fr]">
 			<!-- 修改：添加更多... -->
-			<a class="underline-offset-4 sm:hover:underline" href="/posts/">更多...</a>
+			<a class="underline-offset-4 sm:hover:underline" href="/posts/">More...</a>
 		</h2>
 	</section>
 	{
 		latestNotes.length > 0 && (
 			<section class="mt-16">
 				<h2 class="title mb-6 text-xl text-accent">
-					<a href="/notes/">笔记</a>
+					<a href="/notes/">Note</a>
 				</h2>
 				<ul class="space-y-4" role="list">
 					{latestNotes.map((note) => (

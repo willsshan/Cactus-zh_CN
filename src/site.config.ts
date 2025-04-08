@@ -3,7 +3,7 @@ import type { AstroExpressiveCodeOptions } from "astro-expressive-code";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "仙人掌主题",
+	author: "Jayton",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: "zh-CN",
@@ -14,33 +14,33 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	// Used as the default description meta property and webmanifest description
-	description: "仙人掌主题",
+	description: "Jayton's Blog",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
 	lang: "zh-CN",
 	// Meta property, found in src/components/BaseHead.astro L:42
 	ogLocale: "zh-CN",
 	// Used to construct the meta title property found in src/components/BaseHead.astro L:11, and webmanifest name found in astro.config.ts L:42
-	title: "仙人掌主题",
+	title: "Jayton's Blog",
 };
 
 // Used to generate links in both the Header & Footer.
 export const menuLinks: { path: string; title: string }[] = [
   // 修改：改为中文
-	{
-		path: "/",
-		title: "主页",
+  	{
+	path: "/",
+	title: "Home",
 	},
 	{
-		path: "/about/",
-		title: "关于",
+	path: "/about/",
+	title: "About",
 	},
 	{
-		path: "/posts/",
-		title: "博客",
+	path: "/posts/",
+	title: "Blog",
 	},
 	{
-		path: "/notes/",
-		title: "笔记",
+	path: "/notes/",
+	title: "Note",
 	},
 ];
 
