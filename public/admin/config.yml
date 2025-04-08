@@ -2,8 +2,8 @@ backend:
   name: github
   branch: main # change this to your branch
   repo: willsshan/Cactus-zh_CN # 1、change this to your repo
-  site_domain: cactus-zh-jqaxr34dp-jaytons-projects.vercel.app # 2、change this to your domain
-  base_url: https://cactus-zh-jqaxr34dp-jaytons-projects.vercel.app # 3、change this to your prod URL
+  site_domain: jayton.cn # 2、change this to your domain
+  base_url: https://jayton.cn # 3、change this to your prod URL
   auth_endpoint: oauth # the oauth route provided by the integration
 
 collections:
