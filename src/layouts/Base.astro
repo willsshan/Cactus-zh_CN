@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer.astro";
 import Header from "@/components/layout/Header.astro";
 import { siteConfig } from "@/site.config";
 import type { SiteMeta } from "@/types";
-
+import { Analytics } from '@vercel/analytics/next';
 interface Props {
 	meta: SiteMeta;
 }
@@ -35,5 +35,6 @@ const {
 			<slot />
 		</main>
 		<Footer />
+    <Analytics />
 	</body>
 </html>
